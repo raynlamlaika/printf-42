@@ -16,13 +16,13 @@ all: ${NAME}
 ${NAME}: ${OBJ}
 
 %.o: %.c ${HEADER}
-	${CC} ${CFLAGS} -c $< -o $@ 
-	${AR} ${NAME} $@
+	@${CC} ${CFLAGS} -c $< -o $@ 
+	@${AR} ${NAME} $@
 
 clean:
-	rm -f ${OBJ}
+	@rm -f ${OBJ}
 
 fclean: clean
-	rm -f ${NAME}
+	@rm -f ${NAME}
 
 re: fclean all
